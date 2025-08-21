@@ -22,7 +22,7 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="nav-links">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#">Discover</a>
           <a href="#">Events</a>
           <a href="#">About</a>
