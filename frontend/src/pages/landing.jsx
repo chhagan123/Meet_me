@@ -52,38 +52,49 @@
 //         </div>
 //     )
 // }
-
 import React from "react";
 import "../styles/land.css";
-// import dashboardImg from "../assets/dashboard.png"; // <-- replace with your image path
 import { useNavigate } from "react-router-dom";
+import Ulandig from "./Ulanding";
 
 export default function LandingPage() {
-    const router = useNavigate();
-  return (
-    <section className="hero">
-      <div className="hero-content">
-        <span className="hero-badge">🚀 Now in Beta</span>
-        <h1 className="hero-title">
-          Professional <span className="highlight">Meet</span>
-        </h1>
-        <h2 className="hero-subtitle">Reimagined</h2>
-        <p className="hero-text">
-          Connect with industry leaders, discover opportunities, and build
-          meaningful professional relationships in a modern, intuitive
-          platform.
-        </p>
-        <div className="hero-buttons">
-          <button className="btn-primary"onClick={() => {
-          router("/auth"); 
-        }}>Start Meeting →</button>
-          <button className="btn-secondary">Watch Demo</button>
-        </div>
-      </div>
+  const router = useNavigate();
 
-      <div className="hero-image">
-        <img src="./Meetk.png" alt="Dashboard preview" />
-      </div>
-    </section>
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <span className="hero-badge">🚀 Now in Beta</span>
+          <h1 className="hero-title">
+            Professional <span className="highlight">Meet</span>
+          </h1>
+          <h2 className="hero-subtitle">Reimagined</h2>
+          <p className="hero-text">
+            Connect with industry leaders, discover opportunities, and build
+            meaningful professional relationships in a modern, intuitive
+            platform.
+          </p>
+          <div className="hero-buttons">
+            <button
+              className="btn-primary"
+              onClick={() => {
+                router("/auth");
+              }}
+            >
+              Start Meeting →
+            </button>
+            <button className="btn-secondary">Watch Demo</button>
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <img src="./Meetk.png" alt="Dashboard preview" />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <Ulandig />
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import './App.css';
+import "./index.css"
 import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 import LandingPage from './pages/landing';
 import Authentication from './pages/authentication';
@@ -7,7 +8,7 @@ import VideoMeetComponent from './pages/VideoMeet';
 import HomeComponent from './pages/home';
 import History from './pages/history';
 import Navbar from './pages/Navbar';
-
+import { About } from './pages/About';
 function AppWrapper() {
   return (
     <Router>
@@ -25,8 +26,9 @@ function App() {
   const shouldHideNavbar = /^\/[^/]+$/.test(location.pathname) &&
                            location.pathname !== "/" &&
                            location.pathname !== "/auth" &&
-                       
-                           location.pathname !== "/history";
+                           location.pathname !== "about"&&
+                           location.pathname !== "/history"
+                
 
   return (
     <div className="App">
@@ -38,6 +40,7 @@ function App() {
         <Route path="/home" element={<HomeComponent />} />
         <Route path="/history" element={<History />} />
         <Route path="/:url" element={<VideoMeetComponent />} />
+        <Route path='/about' element={<About/>} />
       </Routes>
     </div>
   );
