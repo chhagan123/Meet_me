@@ -25,7 +25,7 @@ function App() {
   const shouldHideNavbar = /^\/[^/]+$/.test(location.pathname) &&
                            location.pathname !== "/" &&
                            location.pathname !== "/auth" &&
-                           location.pathname !== "/home" &&
+                       
                            location.pathname !== "/history";
 
   return (
