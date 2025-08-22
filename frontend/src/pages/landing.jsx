@@ -56,6 +56,7 @@ import React from "react";
 import "../styles/land.css";
 import { useNavigate } from "react-router-dom";
 import Ulandig from "./Ulanding";
+import Feedback from "./Feedback";
 
 export default function LandingPage() {
   const router = useNavigate();
@@ -94,7 +95,8 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <Ulandig />
+      <Ulandig />\
+      <Feedback/>
     </>
   );
 }

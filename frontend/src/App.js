@@ -9,6 +9,7 @@ import HomeComponent from './pages/home';
 import History from './pages/history';
 import Navbar from './pages/Navbar';
 import { About } from './pages/About';
+import Footer from './pages/Footer';
 function AppWrapper() {
   return (
     <Router>
@@ -42,6 +43,7 @@ function App() {
         <Route path="/:url" element={<VideoMeetComponent />} />
         <Route path='/about' element={<About/>} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
