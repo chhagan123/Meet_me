@@ -65,24 +65,37 @@
     color: #7e22ce;
     border-radius: 8px;
   }
-  
-  /* Links */
-  .nav-links {
-    display: flex;
-    gap: 24px;
-  }
+
+  .nav-links { display: flex; gap: 24px; }
   
   .nav-links a {
+    
+    
     text-decoration: none;
     color: #111;
     font-size: 15px;
+    position: relative;
     transition: color 0.2s ease;
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* distance from text */
+    width: 0%;
+    height: 2px;
+    background: #7e22ce;
+    transition: width 0.3s ease-in-out;
   }
   
   .nav-links a:hover {
     color: #7e22ce;
   }
   
+  .nav-links a:hover::after {
+    width: 100%;
+  }
   /* Buttons */
   .nav-buttons {
     display: flex;

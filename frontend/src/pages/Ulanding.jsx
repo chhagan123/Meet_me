@@ -108,7 +108,7 @@ export default function Ulandig() {
 
   return (
     <Box sx={{ p: 4, bgcolor: "#fafafa" }}>
-      <Grid container spacing={3} justifyContent="center" mb={4}>
+      <Grid container spacing={3} justifyContent="center" mb={2}>
         {featuresRow1.map(renderFeatureCard)}
       </Grid>
 
