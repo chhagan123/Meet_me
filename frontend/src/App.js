@@ -43,7 +43,7 @@ function App() {
         <Route path="/:url" element={<VideoMeetComponent />} />
         <Route path='/about' element={<About/>} />
       </Routes>
-      <Footer/>
+     {!shouldHideNavbar && <Footer/>}
     </div>
   );
 }

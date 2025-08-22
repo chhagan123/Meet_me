@@ -77,13 +77,27 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#">Discover</a>
           <a href="#">Events</a>
           <a href="#">About</a>
           <hr />
-          <button className="sign-in">Sign In</button>
-          <button className="get-started">Get Started</button>
+          <button
+            className="sign-in"
+            onClick={() => {
+              router("/auth"); // or your login page route
+            }}
+          >
+            Sign In
+          </button>
+          <button
+         className="get-started"
+            onClick={() => {
+              router("/get-started"); // change this to your actual route
+            }}
+          >
+            Started as guest
+          </button>
         </div>
       )}
     </nav>
